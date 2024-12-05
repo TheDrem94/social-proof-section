@@ -188,19 +188,57 @@ White: hsl(0, 0%, 100%) */
       text-align: left;
       max-width: 15rem;
       grid-column: 1 / 3;
+      opacity: 0;
+      transform: translateX(-100%);
+      animation: slideIn1 2s forwards;
+    }
+
+    @keyframes slideIn1 {
+      0% {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
 
     .rate-box {
       grid-column: 3 / 5;
       grid-row: 1 / 3;
+      opacity: 0;
+      transform: translateX(100%);
+      animation: slideIn2 2s forwards;
     }
 
-    .comment-box2 {
-      margin-top: 1rem;
+    @keyframes slideIn2 {
+      0% {
+        opacity: 0;
+        transform: translateX(100%);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
 
-    .comment-box3 {
-      margin-top: 2rem;
-      grid-column: 4 / 5;
+    .comment-box {
+      opacity: 0;
+      transform: translateY(100%);
+      animation: slideIn3 2s forwards;
     }
+
+    @keyframes slideIn3 {
+      0% {
+        opacity: 0;
+        transform: translateY(100%);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
   }
